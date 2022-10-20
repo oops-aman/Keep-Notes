@@ -6,6 +6,13 @@ addBtn.addEventListener('click',function(e){
 
     let addTitle = document.getElementById("addTitle");
     let addTxt = document.getElementById("addTxt");
+    
+    // Adding check on empty text values 
+    if (addTitle.value.length==0||addTxt.value.length==0) {
+        alert("Please fill all the fields!!");
+        return;
+    }
+    
     let notes = localStorage.getItem("notes");
     if(notes == null){
         notesObj = [];
