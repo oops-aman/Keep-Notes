@@ -46,13 +46,13 @@ function showNotes(){
     let html = "";
     notesObj.forEach(function(element,index){
         html += `
-        <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">${element.Title}</h5>
-      <p class="card-text">${element.Text}</p>
-      <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete</button>
-    </div>
-  </div>`;
+        <div class="noteCard my-2 mx-2 card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">${element.Title}</h5>
+                <p class="card-text">${element.Text}</p>
+                <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-outline-danger">Delete</button>
+            </div>
+        </div>`;
 });
 let notesElm = document.getElementById("notes");
 if(notesObj.length != 0){
